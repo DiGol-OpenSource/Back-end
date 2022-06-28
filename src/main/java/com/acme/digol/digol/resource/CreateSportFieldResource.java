@@ -1,5 +1,7 @@
 package com.acme.digol.digol.resource;
 import lombok.*;
+
+import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 
 
@@ -9,11 +11,13 @@ import javax.validation.constraints.NotNull;
 @NoArgsConstructor
 @AllArgsConstructor
 public class CreateSportFieldResource {
-    @NotNull
+
+    @NotBlank
     private String name;
     private String img;
     private String address;
     private String description;
-    private float age;
+    private float price;
+    private String sport;
 
 }

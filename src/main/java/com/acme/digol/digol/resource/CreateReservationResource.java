@@ -2,6 +2,7 @@ package com.acme.digol.digol.resource;
 
 import lombok.*;
 
+import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 
 @Getter
@@ -10,9 +11,8 @@ import javax.validation.constraints.NotNull;
 @NoArgsConstructor
 @AllArgsConstructor
 public class CreateReservationResource {
-    @NotNull
-    private String customer;
-    private String date;
-    private String hour;
-    private float prepayment;
+    @NotBlank
+    private String start;
+    private String end;
+    private SportFieldResource sportField;
 }

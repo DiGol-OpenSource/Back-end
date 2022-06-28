@@ -12,6 +12,7 @@ import org.springframework.stereotype.Service;
 
 import javax.validation.ConstraintViolation;
 import javax.validation.Validator;
+import java.util.Date;
 import java.util.List;
 import java.util.Set;
 
@@ -40,6 +41,8 @@ public class SportFieldServiceImpl implements SportFieldService {
     @Override
     public SportField create(SportField sportField) {
 
+        sportField.setCreatedAt(new Date());
+        sportField.setUpdatedAt(new Date());
         Set<ConstraintViolation<SportField>> violations = validator.validate(sportField);
 
         if (!violations.isEmpty())
