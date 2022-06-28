@@ -12,6 +12,7 @@ import javax.validation.constraints.NotNull;
 @AllArgsConstructor
 public class CreateReservationResource {
     @NotBlank
+    private String title;
     private String start;
     private String end;
     private SportFieldResource sportField;

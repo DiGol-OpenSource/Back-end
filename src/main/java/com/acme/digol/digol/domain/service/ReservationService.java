@@ -1,6 +1,5 @@
 package com.acme.digol.digol.domain.service;
 
-import com.acme.digol.digol.domain.model.entity.Customer;
 import com.acme.digol.digol.domain.model.entity.Reservation;
 import com.acme.digol.digol.domain.model.entity.SportField;
 import org.springframework.data.domain.Page;

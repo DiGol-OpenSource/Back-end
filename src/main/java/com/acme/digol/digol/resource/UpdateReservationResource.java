@@ -12,6 +12,7 @@ public class UpdateReservationResource {
 
     @NotBlank
     @NotNull
+    private String title;
     private String start;
     private String end;
 }
