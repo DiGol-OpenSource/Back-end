@@ -3,6 +3,7 @@ package com.acme.digol.digol.domain.model.entity;
 import lombok.*;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 
 @Getter
@@ -17,9 +18,15 @@ public class Reservation {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @NotBlank
     @NotNull
-    private String customer;
-    private String date;
-    private String hour;
-    private float prepayment;
+    private String start;
+    private String end;
+
+
+    //Relationships
+    @ManyToOne(fetch = FetchType.LAZY,optional = false)
+    @JoinColumn(name = "sport_fields_id", nullable = false)
+    private SportField sportField;
+
 }

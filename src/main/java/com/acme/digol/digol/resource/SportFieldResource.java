@@ -14,5 +14,5 @@ public class SportFieldResource {
     private String address;
     private String description;
     private float price;
-
+    private String sport;
 }

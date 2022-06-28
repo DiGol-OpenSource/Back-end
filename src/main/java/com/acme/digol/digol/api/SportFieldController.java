@@ -45,17 +45,17 @@ public class SportFieldController {
     }
     @Operation(summary = "Post Sport Field", description = "Post  Sport Field")
     @PostMapping
-    public SportFieldResource createStudent(@RequestBody CreateSportFieldResource resource) {
+    public SportFieldResource createSportField(@RequestBody CreateSportFieldResource resource) {
         return mapper.toResource(sportFieldService.create(mapper.toModel(resource)));
     }
     @Operation(summary = "Edit Sport Field", description = "Edit  Sport Field.")
     @PutMapping("{sportFieldId}")
-    public SportFieldResource updateStudent(@PathVariable Long sportFieldId, @RequestBody UpdateSportFieldResource resource) {
+    public SportFieldResource updateSportField(@PathVariable Long sportFieldId, @RequestBody UpdateSportFieldResource resource) {
         return mapper.toResource(sportFieldService.update(sportFieldId, mapper.toModel(resource)));
     }
     @Operation(summary = "Delete Sport Field", description = "Delete  Sport Field.")
     @DeleteMapping("{sportFieldId}")
-    public ResponseEntity<?> deleteStudent(@PathVariable Long sportFieldId) {
+    public ResponseEntity<?> deleteSportField(@PathVariable Long sportFieldId) {
         return sportFieldService.delete(sportFieldId);
     }
 }

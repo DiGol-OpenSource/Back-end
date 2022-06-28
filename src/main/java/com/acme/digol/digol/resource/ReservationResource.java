@@ -9,8 +9,8 @@ import lombok.*;
 @AllArgsConstructor
 public class ReservationResource {
     private Long id;
-    private String customer;
-    private String date;
-    private String hour;
-    private float prepayment;
+    private String start;
+    private String end;
+
+    private SportFieldResource sportField;
 }

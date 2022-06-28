@@ -3,6 +3,7 @@ import com.acme.digol.shared.domain.model.AuditModel;
 import lombok.*;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 
 
@@ -18,12 +19,12 @@ public class SportField extends AuditModel {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @NotNull
+    @NotBlank
     private String name;
     private String img;
     private String address;
     private String description;
     private float price;
-
+    private String sport;
 
 }
