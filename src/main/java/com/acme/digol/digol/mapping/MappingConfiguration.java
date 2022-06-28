@@ -1,6 +1,7 @@
 package com.acme.digol.digol.mapping;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.EnableMBeanExport;
 
 @Configuration("digolMappingConfiguration")
 public class MappingConfiguration {
@@ -17,5 +18,7 @@ public class MappingConfiguration {
     public ReservationMapper reservationMapper() {
         return new ReservationMapper();
     }
+    @Bean
+    public UserMapper userMapper(){return new UserMapper();}
 
 }
